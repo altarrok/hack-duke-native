@@ -15,19 +15,24 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Tracker: {
             screens: {
               TabOneScreen: 'one',
             },
           },
-          TabTwo: {
+          Transactions: {
             screens: {
               TabTwoScreen: 'two',
             },
           },
+          Initiatives: {
+            screens: {
+              TabTwoScreen: 'three',
+            },
+          },
         },
       },
-      Modal: 'modal',
+      AddTransaction: 'AddTransaction',
       NotFound: '*',
     },
   },

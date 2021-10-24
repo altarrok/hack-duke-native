@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "features",
+			"path": "..\\hack-duke\\src\\features"
+		},
+		{
+			"name": "hack-duke-native",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
