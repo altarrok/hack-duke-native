@@ -12,7 +12,6 @@ export interface CarbonFootprintTrackerProps extends WithStylesProps<typeof styl
 }
 
 class CarbonFootprintTrackerBase extends React.PureComponent<CarbonFootprintTrackerProps> {
-    did: boolean = false;
 
     componentDidMount() {
         this.props.fetchMerchantCategories();

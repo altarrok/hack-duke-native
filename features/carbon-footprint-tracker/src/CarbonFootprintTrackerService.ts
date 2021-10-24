@@ -1,6 +1,6 @@
 import { MerchantCategories, TransactionFootprint } from "./CarbonFootprintTrackerTypes";
 
-const hostAddress = "http://192.168.0.104:8080/";
+const hostAddress = "http://192.168.0.102:8080/";
 
 export const CarbonFootprintTrackerService = {
     * getSupportedMerchantCategories() {

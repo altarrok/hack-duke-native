@@ -13,8 +13,9 @@ import { Button, ColorSchemeName, Pressable, TouchableOpacity } from 'react-nati
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import AddTransactionScreen from '../screens/AddTransactionScreen';
+import InitiativesScreen from '../screens/InitiativesScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
+import TrackerScreen from '../screens/TrackerScreen';
 import TransactionsSecreen from '../screens/Transactions';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -88,7 +89,7 @@ function BottomTabNavigator() {
       }}>
       <BottomTab.Screen
         name="Tracker"
-        component={TabOneScreen}
+        component={TrackerScreen}
         options={({ navigation }: RootTabScreenProps<'Tracker'>) => ({
           tabBarIcon: ({ color }) => <TabBarIcon name="dot-circle-o" color={color} />,
         })}
@@ -111,7 +112,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="Initiatives"
-        component={TransactionsSecreen}
+        component={InitiativesScreen}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="handshake-o" color={color} />,
         }}

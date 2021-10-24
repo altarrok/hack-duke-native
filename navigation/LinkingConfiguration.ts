@@ -17,7 +17,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         screens: {
           Tracker: {
             screens: {
-              TabOneScreen: 'one',
+              TrackerScreen: 'one',
             },
           },
           Transactions: {

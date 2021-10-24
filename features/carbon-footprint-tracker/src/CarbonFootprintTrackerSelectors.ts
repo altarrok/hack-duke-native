@@ -7,11 +7,13 @@ export const selectMerchantCategories = (state: any) => getPluginState(state).me
 export const selectTransactionFootprints = (state: any) => getPluginState(state).transactionFootprints;
 export const selectTransactionFootprintById = (state: any, id: string) => Object.values(selectTransactionFootprints(state)).filter(transactionFootprint => transactionFootprint.transactionId === id);
 export const selectTransactions = (state: any) => getPluginState(state).transactions;
+export const selectTotalFT = (state: any) => selectTransactions(state).reduce((prevVal, transaction) => Math.round(prevVal + selectTransactionFootprints(state)[transaction.id]?.carbonEmissionInGrams) || 0, 0);
 
 const CarbonFootprintTrackerSelectors: ISelector[] = [
     selectMerchantCategories,
     selectTransactionFootprints,
-    selectTransactionFootprintById
+    selectTransactionFootprintById,
+    selectTotalFT,
 ];
 
 export default CarbonFootprintTrackerSelectors;
